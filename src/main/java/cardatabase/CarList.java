@@ -1,7 +1,6 @@
 package cardatabase;
+import com.hilleljavaelementary.*;
 import java.util.*;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 public class CarList {
 
@@ -10,8 +9,13 @@ public class CarList {
     private Car createCar() throws InputMismatchException {
         Scanner sc = new Scanner(System.in);
         String vin;
-        System.out.println("Введите VIN-код автомобиля");
-        vin = sc.nextLine();
+        do {
+            System.out.println("Введите VIN-код автомобиля. Формат кода: цифра, 4 больших лат. буквы, 2 цифры, 4 больших лат. буквы, 6 цифр");
+            vin = sc.nextLine();
+            if (!DatabaseValidator.isVINValidated(vin)) {
+                System.out.println("Введён некорректный VIN-код. Повторите попытку");
+            }
+        } while (!DatabaseValidator.isVINValidated(vin));
         return assignDataToVin(vin);
     }
 
@@ -28,7 +32,8 @@ public class CarList {
 
     }
 
-    public void editCar() throws NoSuchElementException {
+    public void editCar() throws NoSuchElementException, EmptyDataBaseException {
+        checkIfDataBaseEmpty();
         System.out.println("Для редактирования информации об автомобиле введите VIN-код (либо введите 0, чтобы вернуться в меню):");
         String regNumber;
         Scanner sc = new Scanner(System.in);
@@ -36,12 +41,9 @@ public class CarList {
         if (!regNumber.equals("0")) {
             if (carList.containsKey(regNumber)) {
                 System.out.println("В базе данных найдена машина с указанным VIN-кодом. Переходим к обновлению информации");
-                String reg = checkValidity();
-                carList.get(regNumber).setRegNumber(reg);
-                System.out.println("Введите марку автомобиля:");
-                carList.get(regNumber).setBrand(sc.nextLine());
-                System.out.println("Введите модель автомобиля:");
-                carList.get(regNumber).setModel(sc.nextLine());
+                carList.get(regNumber).setRegNumber(checkRegNumberValidity());
+                carList.get(regNumber).setBrand(checkBrandValidity());
+                carList.get(regNumber).setModel(checkModelValidity());
                 System.out.println("Введите год выпуска автомобиля:");
                 carList.get(regNumber).setYear(sc.nextInt());
                 System.out.println("Введите пробег автомобиля:");
@@ -57,7 +59,8 @@ public class CarList {
 
     // Методы удаления
 
-    public void removeCar() throws NoSuchElementException {
+    public void removeCar() throws NoSuchElementException, EmptyDataBaseException {
+        checkIfDataBaseEmpty();
         System.out.println("Для удаления информации об автомобиле введите VIN-код (либо введите 0, чтобы вернуться в меню:");
         String regNumber;
         Scanner sc = new Scanner(System.in);
@@ -77,12 +80,16 @@ public class CarList {
         }
     }
 
-    public void removeAllCars () {
+    public void removeAllCars () throws  EmptyDataBaseException{
+        checkIfDataBaseEmpty();
         carList.clear();
         System.out.println("Вся информация была удалена из базы данных");
     }
 
-    public void removeByYear () {
+    public void removeByYear () throws EmptyDataBaseException {
+        if (DatabaseValidator.isCollectionEmpty(carList)) {
+            throw new EmptyDataBaseException("Нет данных для отображения!");
+        }
         System.out.println("Для удаления информации об автомобиле по году выпуска введите год выпуска, с которого хотите начать удаление (либо введите 0, чтобы вернуться в меню):");
         Integer lowerYear, upperYear;
         Scanner sc = new Scanner(System.in);
@@ -124,7 +131,8 @@ public class CarList {
         }
     }
 
-    public void searchCarByRegNum() throws NoSuchElementException {
+    public void searchCarByRegNum() throws NoSuchElementException, EmptyDataBaseException {
+        checkIfDataBaseEmpty();
         System.out.println("Для нахождения информации об автомобиле по регистрационному номеру введите регистрационный номер (либо введите 0, чтобы вернуться в меню)");
         String regNumber;
         boolean wasFound = false;
@@ -147,7 +155,8 @@ public class CarList {
         }
     }
 
-    public void searchCarByMarkAndModel() {
+    public void searchCarByMarkAndModel() throws EmptyDataBaseException {
+        checkIfDataBaseEmpty();
         CarList searchResult = new CarList();
         String brand, model;
         Scanner sc = new Scanner(System.in);
@@ -172,7 +181,8 @@ public class CarList {
         }
     }
 
-    public void searchCarByYearRange() {
+    public void searchCarByYearRange() throws EmptyDataBaseException{
+        checkIfDataBaseEmpty();
         CarList searchResult = new CarList();
         Integer lowerYear, upperYear;
         Scanner sc = new Scanner(System.in);
@@ -197,7 +207,8 @@ public class CarList {
         }
     }
 
-    public void searchCarByMileage() {
+    public void searchCarByMileage() throws EmptyDataBaseException{
+        checkIfDataBaseEmpty();
         CarList searchResult = new CarList();
         Integer lowerMileage, upperMileage;
         Scanner sc = new Scanner(System.in);
@@ -224,7 +235,8 @@ public class CarList {
 
     // Методы сортировок
 
-    public void sortData (Comparator<Car> carComparator) {
+    public void sortData (Comparator<Car> carComparator) throws EmptyDataBaseException{
+        checkIfDataBaseEmpty();
         List<Car> sortedList = new ArrayList<>(carList.values());
         Collections.sort(sortedList, carComparator);
         for (Car car: sortedList) {
@@ -233,34 +245,54 @@ public class CarList {
     }
 
     public void sortByBrand () {
-        sortData(new CarBrandComparator());
+        try {
+            sortData(new CarBrandComparator());
+        } catch (EmptyDataBaseException e) {
+            System.out.println(e.getMessage());
+        }
     }
 
     public void sortByModel () {
-        sortData(new CarModelComparator());
+        try {
+            sortData(new CarModelComparator());
+        } catch (EmptyDataBaseException e) {
+            System.out.println(e.getMessage());
+        }
     }
 
     public void sortByYear () {
-        sortData(new CarYearComparator());
+        try {
+            sortData(new CarYearComparator());
+        } catch (EmptyDataBaseException e) {
+            System.out.println(e.getMessage());
+        }
     }
 
     public void sortByMileage () {
-        sortData(new CarMileageComparator());
+        try {
+            sortData(new CarMileageComparator());
+        } catch (EmptyDataBaseException e) {
+            System.out.println(e.getMessage());
+        }
     }
 
     public void sortByBrandAndModel (){
-        sortData(new CarBrandComparator().thenComparing(new CarModelComparator()));
+        try {
+            sortData(new CarBrandComparator().thenComparing(new CarModelComparator()));
+        } catch (EmptyDataBaseException e) {
+            System.out.println(e.getMessage());
+        }
     }
 
     // Утилитные методы
 
     public void showCarList(CarList carDataBase) throws EmptyDataBaseException{
-        if (carDataBase.carList.size() == 0) {
+        if (DatabaseValidator.isCollectionEmpty(carDataBase.carList)) {
             throw new EmptyDataBaseException("Нет данных для отображения!");
         } else {
             System.out.println("По данному запросу найдены следующие автомобили");
             int i = 0;
-            for (Car car : carList.values()) {
+            for (Car car : carDataBase.carList.values()) {
                 System.out.print(i + 1 + ". ");
                 System.out.println(car.toString());
                 i++;
@@ -270,14 +302,12 @@ public class CarList {
 
     public static Car assignDataToVin (String vin) {
         Scanner sc = new Scanner(System.in);
-        String brand, model;
         Integer year;
         Integer mileage;
-        String reg = checkValidity();
-        System.out.println("Введите марку автомобиля:");
-        brand = sc.nextLine();
+        String reg = checkRegNumberValidity();
+        String brand = checkBrandValidity();
         System.out.println("Введите модель автомобиля:");
-        model = sc.nextLine();
+        String model = checkModelValidity();
         System.out.println("Введите год выпуска автомобиля:");
         year = sc.nextInt();
         System.out.println("Введите пробег автомобиля:");
@@ -285,20 +315,49 @@ public class CarList {
         return new Car(vin, reg, brand, model, year, mileage);
     }
 
-    public static String checkValidity () {
+    public static String checkRegNumberValidity () {
         String reg;
         Scanner sc = new Scanner(System.in);
-        Pattern pattern = Pattern.compile("(^[A-Z]{2}\\d{4}[A-Z]{2}$)|(^[А-Я]{2}\\d{4}[А-Я]{2}$)");
-        Matcher matcher;
         do {
             System.out.println("Введите регистрационный номер автомобиля:");
             reg = sc.nextLine();
-            matcher = pattern.matcher(reg);
-            if (!matcher.find(0)) {
+            if (!DatabaseValidator.isRegNumberValidated(reg)) {
                 System.out.println("Недопустимый формат регистрационного номера. Необходимо повторить процедуру ввода.");
             }
-        } while (!matcher.find(0));
+        } while (!DatabaseValidator.isRegNumberValidated(reg));
         return reg;
+    }
+
+    public static String checkModelValidity () {
+        String model;
+        Scanner sc = new Scanner(System.in);
+        do {
+            System.out.println("Введите модель автомобиля:");
+            model = sc.nextLine();
+            if (!DatabaseValidator.isRegNumberValidated(model)) {
+                System.out.println("Поле не может быть пустым. Необходимо повторить процедуру ввода.");
+            }
+        } while (!DatabaseValidator.isRegNumberValidated(model));
+        return model;
+    }
+
+    public static String checkBrandValidity () {
+        String brand;
+        Scanner sc = new Scanner(System.in);
+        do {
+            System.out.println("Введите марку автомобиля:");
+            brand = sc.nextLine();
+            if (!DatabaseValidator.isStringEmpty(brand)) {
+                System.out.println("Поле не может быть пустым. Необходимо повторить процедуру ввода.");
+            }
+        } while (!DatabaseValidator.isStringEmpty(brand));
+        return brand;
+    }
+
+    public void checkIfDataBaseEmpty () throws EmptyDataBaseException {
+        if (DatabaseValidator.isCollectionEmpty(carList)) {
+            throw new EmptyDataBaseException("Нет данных для отображения!");
+        }
     }
 
 }

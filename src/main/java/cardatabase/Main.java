@@ -1,4 +1,6 @@
 package cardatabase;
+import com.hilleljavaelementary.DatabaseValidator;
+
 import java.util.Scanner;
 public class Main {
 
@@ -16,6 +18,7 @@ public class Main {
             number = sc.nextByte();
             switch (number) {
                 case 1: {
+
                     callSearchMenu(carDataBase);
                     break;
                 }
@@ -26,7 +29,7 @@ public class Main {
                 case 3: {
                     try {
                         carDataBase.editCar();
-                    } catch (NoSuchElementException e) {
+                    } catch (NoSuchElementException | EmptyDataBaseException e) {
                         System.out.println(e.getMessage());
                     }
                     break;
@@ -54,6 +57,12 @@ public class Main {
     }
 
     public static void callSearchMenu(CarList carDataBase) {
+        try {
+            carDataBase.checkIfDataBaseEmpty();
+        } catch (EmptyDataBaseException e) {
+            System.out.println(e.getMessage());
+            return;
+        }
         Scanner sc = new Scanner(System.in);
         byte number = 0;
                while (number != -1) {
@@ -71,21 +80,33 @@ public class Main {
                 case 2: {
                     try {
                         carDataBase.searchCarByRegNum();
-                    } catch (NoSuchElementException e) {
+                    } catch (NoSuchElementException | EmptyDataBaseException e) {
                         System.out.println(e.getMessage());
                     }
                     break;
                 }
                 case 3: {
-                    carDataBase.searchCarByMarkAndModel();
+                    try {
+                        carDataBase.searchCarByMarkAndModel();
+                    } catch (EmptyDataBaseException e) {
+                        System.out.println(e.getMessage());
+                    }
                     break;
                 }
                 case 4: {
-                    carDataBase.searchCarByYearRange();
+                    try {
+                        carDataBase.searchCarByYearRange();
+                    } catch (EmptyDataBaseException e) {
+                        System.out.println(e.getMessage());
+                    }
                     break;
                 }
                 case 5: {
-                    carDataBase.searchCarByMileage();
+                    try {
+                        carDataBase.searchCarByMileage();
+                    } catch (EmptyDataBaseException e) {
+                        System.out.println(e.getMessage());
+                    }
                     break;
                 }
                 case 7: {
@@ -118,17 +139,25 @@ public class Main {
                 case 1: {
                     try {
                     carDataBase.removeCar();
-                    } catch (NoSuchElementException e) {
+                    } catch (NoSuchElementException | EmptyDataBaseException e) {
                         System.out.println(e.getMessage());
                     }
                     break;
                 }
                 case 2: {
-                    carDataBase.removeByYear();
+                    try {
+                        carDataBase.removeByYear();
+                    } catch (EmptyDataBaseException e) {
+                        System.out.println(e.getMessage());
+                    }
                     break;
                 }
                 case 3: {
-                    carDataBase.removeAllCars();
+                    try {
+                        carDataBase.removeAllCars();
+                    } catch (EmptyDataBaseException e) {
+                        System.out.println(e.getMessage());
+                    }
                     break;
                 }
                 case 0: {
