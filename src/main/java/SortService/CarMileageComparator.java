@@ -1,4 +1,6 @@
-package cardatabase;
+package SortService;
+import cardatabase.Car;
+
 import java.util.Comparator;
 
 public class CarMileageComparator implements Comparator<Car> {

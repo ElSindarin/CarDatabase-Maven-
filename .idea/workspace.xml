@@ -2,8 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aa40bcba-39e2-4a79-b857-178b6b589bfa" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/CreateAddService/CreateAddCarService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/EditService/EditService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/InputService/InputService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/RemoveService/RemoveService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/SearchService/SearchService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/SortService/SortService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ValidityCheckService/ValidityCheckService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cardatabase/NotUniqueVinException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/TestCrudOperations.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cardatabase/CarBrandComparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SortService/CarBrandComparator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cardatabase/CarList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cardatabase/CarList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cardatabase/CarMileageComparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SortService/CarMileageComparator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cardatabase/CarModelComparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SortService/CarModelComparator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cardatabase/CarYearComparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SortService/CarYearComparator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cardatabase/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cardatabase/Main.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -16,19 +31,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cardatabase/CarList.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="38" lean-forward="true" selection-start-column="38" selection-end-column="38" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cardatabase/Car.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" selection-start-line="5" selection-end-line="5" />
+            <state relative-caret-position="51">
+              <caret line="3" selection-start-line="3" selection-end-line="3" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -37,23 +43,22 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cardatabase/CarBrandComparator.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/SearchService/SearchService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="37" selection-start-line="5" selection-start-column="37" selection-end-line="5" selection-end-column="37" />
+            <state relative-caret-position="289">
+              <caret line="72" column="46" selection-start-line="72" selection-start-column="46" selection-end-line="72" selection-end-column="46" />
               <folding>
-                <element signature="e#151#152#0" expanded="true" />
-                <element signature="e#210#211#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cardatabase/CarList.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cardatabase/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="20" selection-start-column="20" selection-end-column="20" />
+            <state relative-caret-position="-1649">
+              <caret line="218" column="51" selection-start-line="218" selection-start-column="51" selection-end-line="218" selection-end-column="51" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -62,60 +67,81 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cardatabase/CarMileageComparator.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/CreateAddService/CreateAddCarService.java">
           <provider selected="true" editor-type-id="text-editor">
             <state>
-              <caret column="20" selection-start-column="20" selection-end-column="20" />
+              <caret column="25" lean-forward="true" selection-start-column="25" selection-end-column="25" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cardatabase/CarModelComparator.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/InputService/InputService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="20" selection-start-column="20" selection-end-column="20" />
+            <state relative-caret-position="527">
+              <caret line="31" column="19" selection-start-line="31" selection-start-column="19" selection-end-line="31" selection-end-column="19" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cardatabase/CarYearComparator.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ValidityCheckService/ValidityCheckService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="20" selection-start-column="20" selection-end-column="20" />
+            <state relative-caret-position="136">
+              <caret line="8" selection-start-line="8" selection-end-line="8" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#306#307#0" expanded="true" />
+                <element signature="e#393#394#0" expanded="true" />
+                <element signature="e#459#460#0" expanded="true" />
+                <element signature="e#522#523#0" expanded="true" />
+                <element signature="e#583#584#0" expanded="true" />
+                <element signature="e#646#647#0" expanded="true" />
+                <element signature="e#707#708#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cardatabase/EmptyDataBaseException.java">
+        <entry file="jar://$MAVEN_REPOSITORY$/com/hilleljavaelementary/validationLibrary/1.0-SNAPSHOT/validationLibrary-1.0-SNAPSHOT.jar!/com/hilleljavaelementary/DatabaseValidator.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="20" selection-start-column="20" selection-end-column="20" />
+            <state relative-caret-position="374">
+              <caret line="28" column="26" selection-start-line="28" selection-start-column="26" selection-end-line="28" selection-end-column="26" />
+              <folding>
+                <element signature="e#548#549#0" expanded="true" />
+                <element signature="e#617#618#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cardatabase/Main.java">
+        <entry file="file://$PROJECT_DIR$/src/test/java/TestCrudOperations.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="5" column="15" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="15" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cardatabase/NoSuchElementException.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="6" selection-start-line="6" selection-end-line="6" />
+            <state relative-caret-position="677">
+              <caret line="40" column="2" selection-start-line="40" selection-start-column="2" selection-end-line="40" selection-end-column="2" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -123,7 +149,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/cardatabase/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/cardatabase/CarBrandComparator.java" />
         <option value="$PROJECT_DIR$/src/main/java/cardatabase/CarMileageComparator.java" />
         <option value="$PROJECT_DIR$/src/main/java/cardatabase/CarModelComparator.java" />
@@ -132,7 +157,22 @@
         <option value="$PROJECT_DIR$/src/main/java/cardatabase/NoSuchElementException.java" />
         <option value="$PROJECT_DIR$/src/main/java/cardatabase/Car.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/cardatabase/NotUniqueVinException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/CreateAddCarService/CreateAddCarService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/RemoveService/RemoveService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/SearchService/SearchService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/SortService/CarBrandComparator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/SortService/CarYearComparator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/SortService/CarModelComparator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/SortService/CarMileageComparator.java" />
         <option value="$PROJECT_DIR$/src/main/java/cardatabase/CarList.java" />
+        <option value="$PROJECT_DIR$/src/main/java/SortService/SortService.java" />
+        <option value="$PROJECT_DIR$/src/test/java/TestCrudOperations.java" />
+        <option value="$PROJECT_DIR$/src/main/java/EditService/EditService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/CreateAddService/CreateAddCarService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ValidityCheckService/ValidityCheckService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/InputService/InputService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cardatabase/Main.java" />
       </list>
     </option>
   </component>
@@ -207,7 +247,112 @@
             </path>
             <path>
               <item name="cardatabase" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cardatabase" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="CreateAddService" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cardatabase" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cardatabase" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="EditService" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cardatabase" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cardatabase" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="InputService" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cardatabase" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cardatabase" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="RemoveService" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cardatabase" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cardatabase" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="SearchService" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cardatabase" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cardatabase" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="ValidityCheckService" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cardatabase" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cardatabase" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cardatabase" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cardatabase" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cardatabase" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+            <path>
+              <item name="cardatabase" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; 1.8 &gt;" type="70bed36:NamedLibraryElementNode" />
+            </path>
+            <path>
+              <item name="cardatabase" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; 1.8 &gt;" type="70bed36:NamedLibraryElementNode" />
+              <item name="rt.jar" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cardatabase" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; 1.8 &gt;" type="70bed36:NamedLibraryElementNode" />
+              <item name="rt.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cardatabase" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; 1.8 &gt;" type="70bed36:NamedLibraryElementNode" />
+              <item name="rt.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="io" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cardatabase" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: com.hilleljavaelementary:validationLibrary:1.0-SNAPSHOT" type="70bed36:NamedLibraryElementNode" />
+            </path>
+            <path>
+              <item name="cardatabase" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: com.hilleljavaelementary:validationLibrary:1.0-SNAPSHOT" type="70bed36:NamedLibraryElementNode" />
+              <item name="validationLibrary-1.0-SNAPSHOT.jar" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cardatabase" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: com.hilleljavaelementary:validationLibrary:1.0-SNAPSHOT" type="70bed36:NamedLibraryElementNode" />
+              <item name="validationLibrary-1.0-SNAPSHOT.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="hilleljavaelementary" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -218,8 +363,8 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1570051175703" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1570561149118" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../validationLibrary" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -237,13 +382,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="cardatabase.Main" />
       <module name="cardatabase" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="cardatabase.*" />
+          <option name="PATTERN" value="SortService.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -251,9 +396,51 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TestCrudOperations" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="cardatabase" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestCrudOperations" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestCrudOperations.test_add_non_null_car_expect_has_this_car" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="cardatabase" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestCrudOperations" />
+      <option name="METHOD_NAME" value="test_add_non_null_car_expect_has_this_car" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestCrudOperations.test_add_null_car_expect_empty_database" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="cardatabase" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestCrudOperations" />
+      <option name="METHOD_NAME" value="test_add_null_car_expect_empty_database" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestCrudOperations.test_edit_car_expected_database_has_edited_car" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="cardatabase" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestCrudOperations" />
+      <option name="METHOD_NAME" value="test_edit_car_expected_database_has_edited_car" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.TestCrudOperations.test_edit_car_expected_database_has_edited_car" />
+        <item itemvalue="JUnit.TestCrudOperations.test_add_null_car_expect_empty_database" />
+        <item itemvalue="JUnit.TestCrudOperations.test_add_non_null_car_expect_has_this_car" />
+        <item itemvalue="JUnit.TestCrudOperations" />
       </list>
     </recent_temporary>
   </component>
@@ -275,14 +462,84 @@
       <option name="project" value="LOCAL" />
       <updated>1569449313821</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Added junit description in pom.xml">
+      <created>1570101708284</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1570101708284</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Added some validation methods">
+      <created>1570109060832</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1570109060832</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="TestCrudOperations - 2019.10.06 at 17h 06m 10s.xml">
+      <configuration name="TestCrudOperations" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestCrudOperations - 2019.10.06 at 17h 28m 04s.xml">
+      <configuration name="TestCrudOperations" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestCrudOperations - 2019.10.06 at 17h 40m 23s.xml">
+      <configuration name="TestCrudOperations" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestCrudOperations - 2019.10.06 at 17h 41m 37s.xml">
+      <configuration name="TestCrudOperations" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestCrudOperations_test_add_non_null_car_expect_has_this_car - 2019.10.06 at 17h 42m 56s.xml">
+      <configuration name="TestCrudOperations.test_add_non_null_car_expect_has_this_car" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestCrudOperations_test_add_null_car_expect_empty_database - 2019.10.06 at 17h 56m 57s.xml">
+      <configuration name="TestCrudOperations.test_add_null_car_expect_empty_database" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestCrudOperations_test_add_null_car_expect_empty_database - 2019.10.06 at 17h 58m 55s.xml">
+      <configuration name="TestCrudOperations.test_add_null_car_expect_empty_database" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestCrudOperations_test_add_null_car_expect_empty_database - 2019.10.06 at 17h 59m 23s.xml">
+      <configuration name="TestCrudOperations.test_add_null_car_expect_empty_database" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestCrudOperations_test_edit_car_expected_database_has_edited_car - 2019.10.06 at 18h 13m 36s.xml">
+      <configuration name="TestCrudOperations.test_edit_car_expected_database_has_edited_car" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26865673" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28997868" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32900432" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39935064" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32900432" />
+      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32900432" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Maven" order="6" visible="true" weight="0.32995737" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+    </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28997868" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -296,84 +553,44 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32900432" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.32900432" />
+      <window_info anchor="bottom" id="Messages" order="10" visible="true" weight="0.32900432" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="right" id="Maven" order="6" visible="true" weight="0.32995737" />
+      <window_info anchor="right" id="Maven" order="6" weight="0.32995737" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
-    </layout>
+    </layout-to-restore>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added some Lombok annotations in Car class." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added some Lombok annotations in Car class." />
+    <MESSAGE value="Added junit description in pom.xml" />
+    <MESSAGE value="Added some validation methods" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added some validation methods" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/cardatabase/CarMileageComparator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="20" selection-start-column="20" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cardatabase/CarModelComparator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="20" selection-start-column="20" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cardatabase/CarYearComparator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="20" selection-start-column="20" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cardatabase/EmptyDataBaseException.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="20" selection-start-column="20" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cardatabase/NoSuchElementException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cardatabase/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="5" column="15" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="15" />
+        <state relative-caret-position="34">
+          <caret line="2" column="25" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
+          <folding>
+            <element signature="e#127#128#0" expanded="true" />
+            <element signature="e#157#158#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cardatabase/Car.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        <state relative-caret-position="119">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cardatabase/CarBrandComparator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="37" selection-start-line="5" selection-start-column="37" selection-end-line="5" selection-end-column="37" />
-          <folding>
-            <element signature="e#151#152#0" expanded="true" />
-            <element signature="e#210#211#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -381,14 +598,189 @@
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="38" lean-forward="true" selection-start-column="38" selection-end-column="38" />
+          <caret column="38" selection-start-column="38" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cardatabase/NoSuchElementException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="10" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/RemoveService/RemoveService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="35" selection-start-line="35" selection-end-line="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cardatabase/NotUniqueVinException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding>
+            <element signature="e#126#127#0" expanded="true" />
+            <element signature="e#156#157#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/SortService/CarBrandComparator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="54" selection-start-line="6" selection-start-column="54" selection-end-line="6" selection-end-column="54" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#151#152#0" expanded="true" />
+            <element signature="e#210#211#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/SortService/CarYearComparator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="55" lean-forward="true" selection-start-line="5" selection-start-column="55" selection-end-line="5" selection-end-column="55" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/SortService/CarModelComparator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="56" selection-start-line="5" selection-start-column="56" selection-end-line="5" selection-end-column="56" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/SortService/CarMileageComparator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="56" selection-start-line="5" selection-start-column="56" selection-end-line="5" selection-end-column="56" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cardatabase/CarList.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/TestCrudOperations.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="677">
+          <caret line="40" column="2" selection-start-line="40" selection-start-column="2" selection-end-line="40" selection-end-column="2" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/SortService/SortService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="935">
+          <caret line="55" column="63" selection-start-line="55" selection-start-column="63" selection-end-line="55" selection-end-column="63" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/io/FileInputStream.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="218" column="23" selection-start-line="218" selection-start-column="23" selection-end-line="218" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/hilleljavaelementary/validationLibrary/1.0-SNAPSHOT/validationLibrary-1.0-SNAPSHOT.jar!/com/hilleljavaelementary/DatabaseValidator.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="28" column="26" selection-start-line="28" selection-start-column="26" selection-end-line="28" selection-end-column="26" />
+          <folding>
+            <element signature="e#548#549#0" expanded="true" />
+            <element signature="e#617#618#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/EditService/EditService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ValidityCheckService/ValidityCheckService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#306#307#0" expanded="true" />
+            <element signature="e#393#394#0" expanded="true" />
+            <element signature="e#459#460#0" expanded="true" />
+            <element signature="e#522#523#0" expanded="true" />
+            <element signature="e#583#584#0" expanded="true" />
+            <element signature="e#646#647#0" expanded="true" />
+            <element signature="e#707#708#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/CreateAddService/CreateAddCarService.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="20" selection-start-column="20" selection-end-column="20" />
+          <caret column="25" lean-forward="true" selection-start-column="25" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/InputService/InputService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="31" column="19" selection-start-line="31" selection-start-column="19" selection-end-line="31" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/SearchService/SearchService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="72" column="46" selection-start-line="72" selection-start-column="46" selection-end-line="72" selection-end-column="46" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cardatabase/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1649">
+          <caret line="218" column="51" selection-start-line="218" selection-start-column="51" selection-end-line="218" selection-end-column="51" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

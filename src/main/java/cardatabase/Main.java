@@ -1,7 +1,15 @@
 package cardatabase;
-import com.hilleljavaelementary.DatabaseValidator;
 
 import java.util.Scanner;
+
+import static CreateAddService.CreateAddCarService.*;
+import static EditService.EditService.editCarWithCheck;
+import static InputService.InputService.*;
+import static RemoveService.RemoveService.*;
+import static SearchService.SearchService.*;
+import static SortService.SortService.*;
+import static ValidityCheckService.ValidityCheckService.checkIfDataBaseEmpty;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -9,11 +17,12 @@ public class Main {
         callMainMenu(carDataBase);
     }
 
-    public static void callMainMenu (CarList carDataBase) {
+    public static void callMainMenu(CarList carDataBase) {
         System.out.println("Добро пожаловать в меню по работе с базой данных автомобилей!");
         byte number = 0;
         Scanner sc = new Scanner(System.in);
-        mainMenu: while (number != -1) {
+        mainMenu:
+        while (number != -1) {
             showMainMenuText();
             number = sc.nextByte();
             switch (number) {
@@ -23,12 +32,36 @@ public class Main {
                     break;
                 }
                 case 2: {
-                    carDataBase.addCar();
+                    try {
+                        System.out.println("Открыто меню добавления автомобиля в базу данных. Чтобы выйти из меню, вместо VIN-кода введите 0");
+                        String vin = inputValidatedVin();
+                        if (vin.equals("0")) {
+                            break;
+                        }
+                        String reg = inputValidatedReg();
+                        String brand = inputValidatedBrand();
+                        String model = inputValidatedModel();
+                        Integer year = inputValidatedYear();
+                        Integer mileage = inputValidatedMileage();
+                        addCar(carDataBase, createCar(vin, reg, brand, model, year, mileage));
+                    } catch (NotUniqueVinException | IllegalArgumentException e) {
+                        System.out.println(e.getMessage());
+                    }
                     break;
                 }
                 case 3: {
+                    String vin;
                     try {
-                        carDataBase.editCar();
+                        checkIfDataBaseEmpty(carDataBase);
+                        do {
+                            System.out.println("Для редактирования информации об автомобиле введите VIN-код (либо введите 0, чтобы вернуться в меню):");
+                            vin = inputValidatedVin();
+                            if (!vin.equals("0")) {
+                                carDataBase = editCarWithCheck(carDataBase, vin);
+                            }
+                        } while (!vin.equals("0"));
+                        return;
+
                     } catch (NoSuchElementException | EmptyDataBaseException e) {
                         System.out.println(e.getMessage());
                     }
@@ -58,36 +91,56 @@ public class Main {
 
     public static void callSearchMenu(CarList carDataBase) {
         try {
-            carDataBase.checkIfDataBaseEmpty();
+            checkIfDataBaseEmpty(carDataBase);
         } catch (EmptyDataBaseException e) {
             System.out.println(e.getMessage());
             return;
         }
         Scanner sc = new Scanner(System.in);
         byte number = 0;
-               while (number != -1) {
+        while (number != -1) {
             showSearchMenu();
             number = sc.nextByte();
             switch (number) {
                 case 1: {
+                    String vin;
                     try {
-                        carDataBase.searchCarByVIN();
-                    } catch (NoSuchElementException e) {
+                        do {
+                            System.out.println("Для нахождения информации об автомобиле по VIN-коду введите VIN-код (либо введите 0, чтобы вернуться в меню)");
+                            vin = inputValidatedVin();
+                            searchByVIN(carDataBase,vin);
+                        } while (!vin.equals("0"));
+                    } catch (NoSuchElementException | EmptyDataBaseException e) {
                         System.out.println(e.getMessage());
                     }
                     break;
                 }
                 case 2: {
+                    String reg;
                     try {
-                        carDataBase.searchCarByRegNum();
+                        do {
+                            System.out.println("Для нахождения информации об автомобиле по регистрационному номеру введите регистрационный номер (либо введите 0, чтобы вернуться в меню)");
+                            reg = inputValidatedReg();
+                            searchByRegNum(carDataBase,reg);
+                        } while (!reg.equals("0"));
                     } catch (NoSuchElementException | EmptyDataBaseException e) {
                         System.out.println(e.getMessage());
                     }
                     break;
                 }
                 case 3: {
+                    String brand, model;
                     try {
-                        carDataBase.searchCarByMarkAndModel();
+                        do {
+
+                            System.out.println("Для поиска автомобиля по марке и модели введите марку (либо введите 0, чтобы вернуться в меню):");
+                            brand = inputValidatedBrand();
+                            if (!brand.equals("0")) {
+                                System.out.println("Теперь введите модель:");
+                                model = inputValidatedModel();
+                                searchByBrandAndModel(carDataBase, brand, model);
+                            }
+                        } while (!brand.equals("0"));
                     } catch (EmptyDataBaseException e) {
                         System.out.println(e.getMessage());
                     }
@@ -95,7 +148,16 @@ public class Main {
                 }
                 case 4: {
                     try {
-                        carDataBase.searchCarByYearRange();
+                        Integer lowerYear, upperYear;
+                        do {
+                            System.out.println("Для поиска автомобиля по году выпуска введите год, с которого хотите начать фильтр (либо введите 0, чтобы вернуться в меню):");
+                            lowerYear = inputValidatedYear();
+                            if (!(lowerYear == 0)) {
+                                System.out.println("Теперь введите год, которым хотите завершить фильтр:");
+                                upperYear = inputValidatedYear();
+                                searchByYearRange(carDataBase, lowerYear, upperYear);
+                            }
+                        } while (lowerYear != 0);
                     } catch (EmptyDataBaseException e) {
                         System.out.println(e.getMessage());
                     }
@@ -103,7 +165,16 @@ public class Main {
                 }
                 case 5: {
                     try {
-                        carDataBase.searchCarByMileage();
+                        Integer lowerMileage, upperMileage;
+                        do {
+                            System.out.println("Для поиска автомобиля по величине пробега введите показания одометра, с которых хотите начать фильтр (либо введите 0, чтобы вернуться в меню):");
+                            lowerMileage = inputValidatedMileage();
+                            if (lowerMileage != 0) {
+                                System.out.println("Теперь введите показания одометра, которыми хотите завершить фильтр:");
+                                upperMileage = inputValidatedMileage();
+                                searchByMileageRange(carDataBase,lowerMileage,upperMileage);
+                            }
+                        } while (lowerMileage != 0);
                     } catch (EmptyDataBaseException e) {
                         System.out.println(e.getMessage());
                     }
@@ -129,7 +200,7 @@ public class Main {
 
     }
 
-    public static void callDeleteMenu (CarList carDataBase) {
+    public static void callDeleteMenu(CarList carDataBase) {
         Scanner sc = new Scanner(System.in);
         byte number = 0;
         while (number != -1) {
@@ -138,7 +209,14 @@ public class Main {
             switch (number) {
                 case 1: {
                     try {
-                    carDataBase.removeCar();
+                        String vin;
+                        do {
+                            System.out.println("Для удаления информации об автомобиле введите VIN-код (либо введите 0, чтобы вернуться в меню:");
+                            vin = inputValidatedVin();
+                            if (!vin.equals("0")) {
+                                removeCar(carDataBase, vin);
+                            }
+                        } while (!vin.equals("0"));
                     } catch (NoSuchElementException | EmptyDataBaseException e) {
                         System.out.println(e.getMessage());
                     }
@@ -146,7 +224,16 @@ public class Main {
                 }
                 case 2: {
                     try {
-                        carDataBase.removeByYear();
+                        Integer lowerYear, upperYear;
+                        do {
+                            System.out.println("Для удаления информации об автомобиле по году выпуска введите год выпуска, с которого хотите начать удаление (либо введите 0, чтобы вернуться в меню):");
+                            lowerYear = inputValidatedYear();
+                            if (lowerYear != 0) {
+                                System.out.println("Теперь введите год, на котором хотите завершить удаление:");
+                                upperYear = sc.nextInt();
+                                removeByYear(carDataBase, lowerYear, upperYear);
+                            }
+                        } while (lowerYear != 0);
                     } catch (EmptyDataBaseException e) {
                         System.out.println(e.getMessage());
                     }
@@ -154,7 +241,7 @@ public class Main {
                 }
                 case 3: {
                     try {
-                        carDataBase.removeAllCars();
+                        removeAllCars(carDataBase);
                     } catch (EmptyDataBaseException e) {
                         System.out.println(e.getMessage());
                     }
@@ -171,7 +258,7 @@ public class Main {
         }
     }
 
-    public static void callSortMenu (CarList carDataBase) {
+    public static void callSortMenu(CarList carDataBase) {
         Scanner sc = new Scanner(System.in);
         byte number = 0;
         while (number != -1) {
@@ -179,23 +266,23 @@ public class Main {
             number = sc.nextByte();
             switch (number) {
                 case 1: {
-                    carDataBase.sortByBrand();
+                    sortByBrand(carDataBase);
                     break;
                 }
                 case 2: {
-                    carDataBase.sortByModel();
+                    sortByModel(carDataBase);
                     break;
                 }
                 case 3: {
-                    carDataBase.sortByYear();
+                    sortByYear(carDataBase);
                     break;
                 }
                 case 4: {
-                    carDataBase.sortByMileage();
+                    sortByMileage(carDataBase);
                     break;
                 }
                 case 5: {
-                    carDataBase.sortByBrandAndModel();
+                    sortByBrandAndModel(carDataBase);
                     break;
                 }
                 case 0: {
@@ -209,7 +296,7 @@ public class Main {
         }
     }
 
-    public static void showMainMenuText () {
+    public static void showMainMenuText() {
         System.out.println("Выберите опцию и введите соответствующее число:");
         System.out.println("1 - Открыть меню поиска");
         System.out.println("2 - Внести автомобиль в базу данных");
@@ -220,7 +307,7 @@ public class Main {
         System.out.println("-1 - Завершить программу");
     }
 
-    public static void showSearchMenu () {
+    public static void showSearchMenu() {
         System.out.println("Меню поиска:");
         System.out.println("1 - Поиск по VIN-коду автомобиля");
         System.out.println("2 - Поиск по регистрационному номеру автомобиля");
@@ -239,7 +326,7 @@ public class Main {
         System.out.println("0 - Вернуться в предыдущее меню");
     }
 
-    public static void showSortMenu () {
+    public static void showSortMenu() {
         System.out.println("Активировано меню сортировки:");
         System.out.println("1 - Сортировать по марке автомобиля");
         System.out.println("2 - Сортировать по модели автомобиля");
