@@ -3,6 +3,10 @@ package EditService;
 import cardatabase.CarList;
 import ExceptionService.EmptyDataBaseException;
 import ExceptionService.NoSuchElementException;
+import sun.invoke.empty.Empty;
+
+import java.util.Objects;
+
 import static InputService.InputService.*;
 
 public class EditService {
@@ -18,7 +22,10 @@ public class EditService {
     }
 
 
-    public static CarList editCar(CarList carDatabase, String vin, String reg, String brand, String model, Integer year, Integer mileage) {
+    public static CarList editCar(CarList carDatabase, String vin, String reg, String brand, String model, Integer year, Integer mileage) throws EmptyDataBaseException {
+        if (Objects.isNull(carDatabase) || carDatabase.getCarList().size() == 0) {
+            throw new EmptyDataBaseException("Невозможно редактировать в пустой базе данных");
+        }
         carDatabase.getCarList().get(vin).setRegNumber(reg);
         carDatabase.getCarList().get(vin).setBrand(brand);
         carDatabase.getCarList().get(vin).setModel(model);
