@@ -1,4 +1,5 @@
 package cardatabase;
+import ExceptionService.EmptyDataBaseException;
 import com.hilleljavaelementary.*;
 import java.util.*;
 
@@ -10,7 +11,7 @@ public class CarList {
         return carList;
     }
 
-    public void showCarList(CarList carDataBase) throws EmptyDataBaseException{
+    public static void showCarList(CarList carDataBase) throws EmptyDataBaseException {
         if (DatabaseValidator.isCollectionEmpty(carDataBase.carList)) {
             throw new EmptyDataBaseException("Нет данных для отображения!");
         } else {

@@ -1,6 +1,6 @@
 package ValidityCheckService;
 import cardatabase.CarList;
-import cardatabase.EmptyDataBaseException;
+import ExceptionService.EmptyDataBaseException;
 import com.hilleljavaelementary.DatabaseValidator;
 
 public class ValidityCheckService {

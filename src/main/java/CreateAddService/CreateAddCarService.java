@@ -2,7 +2,7 @@ package CreateAddService;
 
 import cardatabase.Car;
 import cardatabase.CarList;
-import cardatabase.NotUniqueVinException;
+import ExceptionService.NotUniqueVinException;
 import java.util.Objects;
 
 public class CreateAddCarService {

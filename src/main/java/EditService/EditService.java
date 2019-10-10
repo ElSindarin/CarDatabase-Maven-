@@ -1,8 +1,8 @@
 package EditService;
 
 import cardatabase.CarList;
-import cardatabase.EmptyDataBaseException;
-import cardatabase.NoSuchElementException;
+import ExceptionService.EmptyDataBaseException;
+import ExceptionService.NoSuchElementException;
 import static InputService.InputService.*;
 
 public class EditService {
@@ -24,6 +24,7 @@ public class EditService {
         carDatabase.getCarList().get(vin).setModel(model);
         carDatabase.getCarList().get(vin).setYear(year);
         carDatabase.getCarList().get(vin).setMileage(mileage);
+        System.out.println("Информация об автомобиле с VIN-кодом " + vin + " была успешно отредактирована");
         return carDatabase;
     }
 }

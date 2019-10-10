@@ -2,10 +2,8 @@ package SearchService;
 
 import cardatabase.Car;
 import cardatabase.CarList;
-import cardatabase.EmptyDataBaseException;
-import cardatabase.NoSuchElementException;
-
-import java.util.Scanner;
+import ExceptionService.EmptyDataBaseException;
+import ExceptionService.NoSuchElementException;
 
 import static ValidityCheckService.ValidityCheckService.checkIfDataBaseEmpty;
 

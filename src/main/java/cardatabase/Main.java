@@ -1,5 +1,9 @@
 package cardatabase;
 
+import ExceptionService.EmptyDataBaseException;
+import ExceptionService.NoSuchElementException;
+import ExceptionService.NotUniqueVinException;
+
 import java.util.Scanner;
 
 import static CreateAddService.CreateAddCarService.*;
@@ -9,6 +13,7 @@ import static RemoveService.RemoveService.*;
 import static SearchService.SearchService.*;
 import static SortService.SortService.*;
 import static ValidityCheckService.ValidityCheckService.checkIfDataBaseEmpty;
+import static cardatabase.CarList.showCarList;
 
 public class Main {
 
@@ -182,7 +187,7 @@ public class Main {
                 }
                 case 7: {
                     try {
-                        carDataBase.showCarList(carDataBase);
+                        showCarList(carDataBase);
                     } catch (EmptyDataBaseException e) {
                         System.out.println(e.getMessage());
                     }

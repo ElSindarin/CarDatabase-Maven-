@@ -1,18 +1,18 @@
 package RemoveService;
 
-import cardatabase.Car;
 import cardatabase.CarList;
-import cardatabase.EmptyDataBaseException;
-import cardatabase.NoSuchElementException;
-import com.hilleljavaelementary.DatabaseValidator;
+import ExceptionService.EmptyDataBaseException;
+import ExceptionService.NoSuchElementException;
 
-import java.util.Iterator;
-import java.util.Scanner;
+import java.util.Objects;
 
 import static ValidityCheckService.ValidityCheckService.checkIfDataBaseEmpty;
 
 public class RemoveService {
     public static CarList removeCar(CarList carDatabase, String vin) throws NoSuchElementException, EmptyDataBaseException {
+        if (Objects.isNull(vin)) {
+            throw new IllegalArgumentException("Невозможно удалить машину с несуществующим VIN-кодом");
+        }
         checkIfDataBaseEmpty(carDatabase);
         if (carDatabase.getCarList().containsKey(vin)) {
             System.out.println("В базе данных найдена машина с указанным VIN-кодом. Переходим к удалению информации");
