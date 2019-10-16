@@ -2,15 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aa40bcba-39e2-4a79-b857-178b6b589bfa" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Serialization/SerializationService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CreateAddService/CreateAddCarService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CreateAddService/CreateAddCarService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/EditService/EditService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/EditService/EditService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/RemoveService/RemoveService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RemoveService/RemoveService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cardatabase/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cardatabase/Car.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cardatabase/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cardatabase/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/TestEditOperations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestEditOperations.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -34,11 +27,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/cardatabase/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="73" column="85" selection-start-line="73" selection-start-column="85" selection-end-line="73" selection-end-column="85" />
+            <state relative-caret-position="391">
+              <caret line="23" column="33" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -82,10 +75,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/TestEditOperations.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
+            <state relative-caret-position="697">
               <caret line="41" column="8" selection-start-line="41" selection-start-column="8" selection-end-line="41" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -161,8 +154,8 @@
         <option value="$PROJECT_DIR$/src/main/java/RemoveService/RemoveService.java" />
         <option value="$PROJECT_DIR$/src/main/java/Serialization/SerializationService.java" />
         <option value="$PROJECT_DIR$/src/main/java/EditService/EditService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cardatabase/Main.java" />
         <option value="$PROJECT_DIR$/src/test/java/TestEditOperations.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cardatabase/Main.java" />
       </list>
     </option>
   </component>
@@ -359,7 +352,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1571228953154" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1571229465605" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
@@ -495,7 +488,14 @@
       <option name="project" value="LOCAL" />
       <updated>1570740256313</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Added database IO via Json">
+      <created>1571228988987</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1571228988987</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -541,8 +541,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.32249466" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.32249466" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -551,7 +552,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32900432" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32900432" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39935064" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -605,7 +606,8 @@
     <MESSAGE value="Fully reworked project structure (divided into packages and modules), optimizing some methods." />
     <MESSAGE value="Added some tests, they do not work at the moment" />
     <MESSAGE value="Finished junit tests, assertj tests, including exceptions" />
-    <option name="LAST_COMMIT_MESSAGE" value="Finished junit tests, assertj tests, including exceptions" />
+    <MESSAGE value="Added database IO via Json" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added database IO via Json" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/java/SortService/CarBrandComparator.java">
@@ -840,20 +842,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cardatabase/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/TestEditOperations.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="73" column="85" selection-start-line="73" selection-start-column="85" selection-end-line="73" selection-end-column="85" />
+        <state relative-caret-position="697">
+          <caret line="41" column="8" selection-start-line="41" selection-start-column="8" selection-end-line="41" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/TestEditOperations.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/cardatabase/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="41" column="8" selection-start-line="41" selection-start-column="8" selection-end-line="41" selection-end-column="8" />
+        <state relative-caret-position="391">
+          <caret line="23" column="33" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

@@ -21,13 +21,7 @@ public class Main {
 
     public static void main(String[] args) {
         CarList carDataBase = new CarList();
-        String carDataBasePath = "C:\\Users\\Admin\\IdeaProjects\\cardatabase";
-        try {
-            readFromDatabase(carDataBase, carDataBasePath);
-        } catch (IOException e) {
-            System.out.println("Не удалось загрузить базу данных с диска!");
-            e.printStackTrace();
-        }
+        String carDataBasePath = loadDatabase(carDataBase);
         callMainMenu(carDataBase, carDataBasePath);
     }
 
@@ -355,5 +349,22 @@ public class Main {
         System.out.println("4 - Добавить поле сортировки по пробегу автомобиля");
         System.out.println("5 - Выполнить сортировку");*/
         System.out.println("0 - Вернуться в предыдущее меню");
+    }
+
+    public static String loadDatabase (CarList carDataBase) {
+        String carDataBasePath = "C:\\Users\\Admin\\IdeaProjects\\cardatabase";
+        System.out.println("Введите адрес, по которому у вас расположен каталог с файлами базы данных, либо нажмите 0, чтобы использовать путь по умолчанию");
+        Scanner scanner = new Scanner(System.in);
+        String path;
+        if (!(path = scanner.nextLine()).equals("0")) {
+            carDataBasePath = path;
+        }
+        try {
+            readFromDatabase(carDataBase, carDataBasePath);
+        } catch (IOException e) {
+            System.out.println("Не удалось загрузить базу данных с диска!");
+            e.printStackTrace();
+        }
+        return carDataBasePath;
     }
 }
