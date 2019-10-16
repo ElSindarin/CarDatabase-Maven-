@@ -18,7 +18,7 @@ public class InputService {
     }
 
     public static String inputValidatedVin () {
-        String vin = inputStringParameter("Введите VIN-код автомобиля. Формат кода: цифра, 4 больших лат. буквы, 2 цифры, 4 больших лат. буквы, 6 цифр:");
+        String vin = inputStringParameter("Введите VIN-код автомобиля. Формат кода: 1 цифра, 4 больших лат. буквы, 2 цифры, 4 больших лат. буквы, 6 цифр:");
         if (!checkVinValidity(vin)) {
             System.out.println("Введён некорректный VIN-код. Повторите попытку :(");
             vin = inputValidatedVin();
