@@ -3,7 +3,11 @@ package CreateAddService;
 import cardatabase.Car;
 import cardatabase.CarList;
 import ExceptionService.NotUniqueVinException;
+
+import java.io.IOException;
 import java.util.Objects;
+
+import static Serialization.SerializationService.saveToDatabase;
 
 public class CreateAddCarService {
 
@@ -19,6 +23,12 @@ public class CreateAddCarService {
             throw new NotUniqueVinException("Автомобиль с указанным VIN-кодом уже есть в базе данных. Добавление невозможно!");
         }
         carDatabase.getCarList().put(car.getVin(), car);
+        try {
+            saveToDatabase(car);
+        } catch (IOException e) {
+            System.out.println("Не удалось сохранить автомобиль на диск!");
+            e.printStackTrace();
+        }
         System.out.println("Автомобиль с регистрационным номером " + car.getRegNumber() + " был успешно добавлен в базу данных");
         return carDatabase;
     }

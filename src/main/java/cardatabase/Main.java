@@ -4,6 +4,7 @@ import ExceptionService.EmptyDataBaseException;
 import ExceptionService.NoSuchElementException;
 import ExceptionService.NotUniqueVinException;
 
+import java.io.IOException;
 import java.util.Scanner;
 
 import static CreateAddService.CreateAddCarService.*;
@@ -11,6 +12,7 @@ import static EditService.EditService.editCarWithCheck;
 import static InputService.InputService.*;
 import static RemoveService.RemoveService.*;
 import static SearchService.SearchService.*;
+import static Serialization.SerializationService.readFromDatabase;
 import static SortService.SortService.*;
 import static ValidityCheckService.ValidityCheckService.checkIfDataBaseEmpty;
 import static cardatabase.CarList.showCarList;
@@ -19,10 +21,17 @@ public class Main {
 
     public static void main(String[] args) {
         CarList carDataBase = new CarList();
-        callMainMenu(carDataBase);
+        String carDataBasePath = "C:\\Users\\Admin\\IdeaProjects\\cardatabase";
+        try {
+            readFromDatabase(carDataBase, carDataBasePath);
+        } catch (IOException e) {
+            System.out.println("Не удалось загрузить базу данных с диска!");
+            e.printStackTrace();
+        }
+        callMainMenu(carDataBase, carDataBasePath);
     }
 
-    public static void callMainMenu(CarList carDataBase) {
+    public static void callMainMenu(CarList carDataBase, String path) {
         System.out.println("Добро пожаловать в меню по работе с базой данных автомобилей!");
         byte number = 0;
         Scanner sc = new Scanner(System.in);
@@ -62,10 +71,9 @@ public class Main {
                             System.out.println("Для редактирования информации об автомобиле введите VIN-код (либо введите 0, чтобы вернуться в меню):");
                             vin = inputValidatedVin();
                             if (!vin.equals("0")) {
-                                carDataBase = editCarWithCheck(carDataBase, vin);
+                                carDataBase = editCarWithCheck(carDataBase, vin, path);
                             }
                         } while (!vin.equals("0"));
-                        return;
 
                     } catch (NoSuchElementException | EmptyDataBaseException e) {
                         System.out.println(e.getMessage());
@@ -73,7 +81,7 @@ public class Main {
                     break;
                 }
                 case 4: {
-                    callDeleteMenu(carDataBase);
+                    callDeleteMenu(carDataBase, path);
                     break;
                 }
                 case 5: {
@@ -113,7 +121,7 @@ public class Main {
                         do {
                             System.out.println("Для нахождения информации об автомобиле по VIN-коду введите VIN-код (либо введите 0, чтобы вернуться в меню)");
                             vin = inputValidatedVin();
-                            searchByVIN(carDataBase,vin);
+                            searchByVIN(carDataBase, vin);
                         } while (!vin.equals("0"));
                     } catch (NoSuchElementException | EmptyDataBaseException e) {
                         System.out.println(e.getMessage());
@@ -126,7 +134,7 @@ public class Main {
                         do {
                             System.out.println("Для нахождения информации об автомобиле по регистрационному номеру введите регистрационный номер (либо введите 0, чтобы вернуться в меню)");
                             reg = inputValidatedReg();
-                            searchByRegNum(carDataBase,reg);
+                            searchByRegNum(carDataBase, reg);
                         } while (!reg.equals("0"));
                     } catch (NoSuchElementException | EmptyDataBaseException e) {
                         System.out.println(e.getMessage());
@@ -177,7 +185,7 @@ public class Main {
                             if (lowerMileage != 0) {
                                 System.out.println("Теперь введите показания одометра, которыми хотите завершить фильтр:");
                                 upperMileage = inputValidatedMileage();
-                                searchByMileageRange(carDataBase,lowerMileage,upperMileage);
+                                searchByMileageRange(carDataBase, lowerMileage, upperMileage);
                             }
                         } while (lowerMileage != 0);
                     } catch (EmptyDataBaseException e) {
@@ -205,7 +213,7 @@ public class Main {
 
     }
 
-    public static void callDeleteMenu(CarList carDataBase) {
+    public static void callDeleteMenu(CarList carDataBase, String path) {
         Scanner sc = new Scanner(System.in);
         byte number = 0;
         while (number != -1) {
@@ -236,17 +244,19 @@ public class Main {
                             if (lowerYear != 0) {
                                 System.out.println("Теперь введите год, на котором хотите завершить удаление:");
                                 upperYear = sc.nextInt();
-                                removeByYear(carDataBase, lowerYear, upperYear);
+                                removeByYear(carDataBase, lowerYear, upperYear, path);
                             }
                         } while (lowerYear != 0);
-                    } catch (EmptyDataBaseException e) {
+                    } catch (EmptyDataBaseException | NoSuchElementException e) {
                         System.out.println(e.getMessage());
+                    } catch (IOException e) {
+                        e.printStackTrace();
                     }
                     break;
                 }
                 case 3: {
                     try {
-                        removeAllCars(carDataBase);
+                        removeAllCars(carDataBase, path);
                     } catch (EmptyDataBaseException e) {
                         System.out.println(e.getMessage());
                     }
