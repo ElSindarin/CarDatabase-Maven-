@@ -4,11 +4,13 @@ import ExceptionService.EmptyDataBaseException;
 import ExceptionService.NoSuchElementException;
 import ExceptionService.NotUniqueVinException;
 
+import javax.naming.InsufficientResourcesException;
 import java.io.IOException;
 import java.util.Scanner;
 
 import static CreateAddService.CreateAddCarService.*;
 import static EditService.EditService.editCarWithCheck;
+import static ExportImportService.ExportService.exportToCSV;
 import static InputService.InputService.*;
 import static RemoveService.RemoveService.*;
 import static SearchService.SearchService.*;
@@ -81,6 +83,9 @@ public class Main {
                 case 5: {
                     callSortMenu(carDataBase);
                     break;
+                }
+                case 6: {
+                    callCsvMenu(carDataBase);
                 }
                 case 0: {
                     continue mainMenu;
@@ -312,6 +317,7 @@ public class Main {
         System.out.println("3 - Редактировать информацию об автомобиле по VIN-коду");
         System.out.println("4 - Открыть меню удаления информации");
         System.out.println("5 - Открыть меню сортировки");
+        System.out.println("6 - Открыть меню экспорта/импорта базы данных в CSV-файл");
         System.out.println("0 - Вернуться в предыдущее меню");
         System.out.println("-1 - Завершить программу");
     }
@@ -367,4 +373,38 @@ public class Main {
         }
         return carDataBasePath;
     }
+
+    public static void showCsvMenu () {
+        System.out.println("Выберите опцию экспорта или импорта базы данных в CSV файл, либо введите 0, чтобы вернуться в предыдущее меню");
+        System.out.println("1 - Экспотировать базу данных в CSV файл");
+        System.out.println("2 - Импортировать базу данных из CSV файла");
+    }
+    public static void callCsvMenu (CarList carDatabase){
+        Scanner sc = new Scanner(System.in);
+        while (true) {
+            showCsvMenu();
+            byte number = sc.nextByte();
+            switch (number) {
+                case 1: {
+                    System.out.println("Введите полный адрес каталога, в который хотите выгрузить базу данных");
+                    Scanner scanner = new Scanner(System.in);
+                    String input = scanner.nextLine();
+                    try {
+                        exportToCSV(carDatabase, input);
+                    } catch (IOException |InsufficientResourcesException e) {
+                        System.out.println(e.getMessage());
+                    }
+                    break;
+                }
+                case 0: {
+                    return;
+                }
+                default: {
+                    System.out.println("Выбранная вами опция не существует!");
+                    break;
+                }
+            }
+        }
+    }
+
 }
