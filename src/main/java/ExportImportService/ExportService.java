@@ -2,16 +2,13 @@ package ExportImportService;
 
 import cardatabase.Car;
 import cardatabase.CarList;
-import sun.nio.cs.US_ASCII;
 
 import javax.naming.InsufficientResourcesException;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.IllegalFormatException;
 import java.util.Map;
 
 public class ExportService {
@@ -46,10 +43,11 @@ public class ExportService {
             fileWriter.append(entry.getValue().getYear().toString());
             fileWriter.append(',');
             fileWriter.append(entry.getValue().getMileage().toString());
-            fileWriter.append("\n");
+            fileWriter.write("\n");
         }
         fileWriter.flush();
         fileWriter.close();
+        System.out.println(carDatabase.getCarList().size() + " авто экспортированы в CSV-файл");
     }
     
     public static Long getDatabaseSizeInBytes (CarList carDatabase) {
