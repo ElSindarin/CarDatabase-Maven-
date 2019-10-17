@@ -16,7 +16,7 @@ import java.util.Map;
 
 public class ExportService {
 
-    public static void exportToCSV (CarList carDatabase, String input) throws IOException, InsufficientResourcesException {
+    public static void exportToCSV (CarList carDatabase, String input) throws IOException, InsufficientResourcesException, IllegalArgumentException {
         Path path = Paths.get(input);
         if (!path.toFile().isDirectory()) {
             throw new IllegalArgumentException("Введённый путь не является директорией!");

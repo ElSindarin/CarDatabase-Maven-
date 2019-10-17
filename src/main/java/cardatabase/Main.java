@@ -391,7 +391,7 @@ public class Main {
                     String input = scanner.nextLine();
                     try {
                         exportToCSV(carDatabase, input);
-                    } catch (IOException |InsufficientResourcesException e) {
+                    } catch (IOException | InsufficientResourcesException | IllegalArgumentException e) {
                         System.out.println(e.getMessage());
                     }
                     break;
