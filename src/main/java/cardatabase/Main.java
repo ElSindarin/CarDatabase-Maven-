@@ -11,6 +11,7 @@ import java.util.Scanner;
 import static CreateAddService.CreateAddCarService.*;
 import static EditService.EditService.editCarWithCheck;
 import static ExportImportService.ExportService.exportToCSV;
+import static ExportImportService.ImportService.ImportFromCSV;
 import static InputService.InputService.*;
 import static RemoveService.RemoveService.*;
 import static SearchService.SearchService.*;
@@ -392,6 +393,17 @@ public class Main {
                     try {
                         exportToCSV(carDatabase, input);
                     } catch (IOException | InsufficientResourcesException | IllegalArgumentException e) {
+                        System.out.println(e.getMessage());
+                    }
+                    break;
+                }
+                case 2: {
+                    System.out.println("Введите полный адрес файла, из которого хотите произвести импорт базы данных");
+                    Scanner scanner = new Scanner(System.in);
+                    String input = scanner.nextLine();
+                    try {
+                        ImportFromCSV(carDatabase,input);
+                    } catch (IOException | NotUniqueVinException | IllegalArgumentException e) {
                         System.out.println(e.getMessage());
                     }
                     break;
