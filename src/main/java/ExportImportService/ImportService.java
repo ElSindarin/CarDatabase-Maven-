@@ -32,12 +32,13 @@ public class ImportService {
 
     public static Path validateImportPath (String input) throws IOException, IllegalArgumentException {
         Path path = Paths.get(input);
+        if (!path.toFile().exists() ) {
+            throw new IllegalArgumentException("Не существует файла с указанным адресом!");
+        }
         if (!path.toFile().isFile() || !path.toFile().getCanonicalPath().endsWith(".csv")) {
             throw new IllegalArgumentException("Введённый путь не является файлом в CSV-формате!");
         }
-        if (!path.toFile().exists()) {
-            throw new IllegalArgumentException("Не существует файла с указанным адресом!");
-        }
+
         return path;
     }
 
