@@ -13,7 +13,7 @@ import static CreateAddService.CreateAddCarService.addCar;
 
 public class TestAddOperations {
 
-    private CarList carDataBase = new CarList();
+    private CarList carDataBase = CarList.getInstance();
 
     @Rule
     public ExpectedException expectedException = ExpectedException.none();

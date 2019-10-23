@@ -5,7 +5,18 @@ import java.util.*;
 
 public class CarList {
 
-    private Map<String, Car> carList = new HashMap<>();
+    private static Map<String, Car> carList = new HashMap<>();
+
+    private CarList() {
+    }
+
+    public static class Helper {
+        private static final CarList instance = new CarList();
+    }
+
+    public static CarList getInstance() {
+        return Helper.instance;
+    }
 
     public Map<String, Car> getCarList() {
         return carList;

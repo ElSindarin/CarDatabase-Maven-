@@ -12,7 +12,7 @@ import static CreateAddService.CreateAddCarService.addCar;
 import static SearchService.SearchService.searchByVIN;
 
 public class TestSearchOperations {
-    private CarList carDatabase = new CarList();
+    private CarList carDatabase = CarList.getInstance();
 
     @Rule
     public ExpectedException expectedException = ExpectedException.none();

@@ -40,14 +40,10 @@ public class ImportService {
     public static Path validateImportPath (String input) throws IOException, IllegalArgumentException {
         Path path = Paths.get(input);
         if (!path.toFile().exists() ) {
-            String msg = "Не существует файла с указанным адресом!";
-            log.log(Level.WARNING, msg);
-            throw new IllegalArgumentException(msg);
+            throw new IllegalArgumentException("Не существует файла с указанным адресом!");
         }
         if (!path.toFile().isFile() || !path.toFile().getCanonicalPath().endsWith(".csv")) {
-            String msg = "Введённый путь не является файлом в CSV-формате!";
-            log.log(Level.WARNING, msg);
-            throw new IllegalArgumentException(msg);
+            throw new IllegalArgumentException("Введённый путь не является файлом в CSV-формате!");
         }
 
         return path;
@@ -55,39 +51,25 @@ public class ImportService {
 
     public static Car validateCarInput (String[] carInput) throws IllegalArgumentException {
         if (carInput.length != 7) {
-            String msg = "В файле содержится строка, которая не является правильно записанными данными об автомобиле!";
-            log.log(Level.WARNING, msg);
-            throw new IllegalArgumentException(msg);
+            throw new IllegalArgumentException("В файле содержится строка, которая не является правильно записанными данными об автомобиле!");
         }
         if (!checkVinValidity(carInput[1])) {
-            String msg = "VIN-код несоответствующего формата";
-            log.log(Level.WARNING, msg);
-            throw new IllegalArgumentException(msg);
+            throw new IllegalArgumentException("VIN-код несоответствующего формата");
         }
         if (!checkRegNumberValidity(carInput[2])) {
-            String msg = "Регистрационный номер несоответствующего формата";
-            log.log(Level.WARNING, msg);
-            throw new IllegalArgumentException(msg);
+            throw new IllegalArgumentException("Регистрационный номер несоответствующего формата");
         }
         if (!checkBrandValidity(carInput[3])) {
-            String msg = "Марка несоответствующего формата";
-            log.log(Level.WARNING, msg);
-            throw new IllegalArgumentException(msg);
+            throw new IllegalArgumentException("Марка несоответствующего формата");
         }
         if (!checkModelValidity(carInput[4])) {
-            String msg = "Модель несоответствующего формата";
-            log.log(Level.WARNING, msg);
-            throw new IllegalArgumentException(msg);
+            throw new IllegalArgumentException("Модель несоответствующего формата");
         }
         if (!checkYearValidity(Integer.valueOf(carInput[5]))) {
-            String msg = "Год выпуска несоответствующего формата";
-            log.log(Level.WARNING, msg);
-            throw new IllegalArgumentException(msg);
+            throw new IllegalArgumentException("Год выпуска несоответствующего формата");
         }
         if (!checkMileageValidity(Integer.valueOf(carInput[6]))) {
-            String msg = "Пробег несоответствующего формата";
-            log.log(Level.WARNING, msg);
-            throw new IllegalArgumentException(msg);
+            throw new IllegalArgumentException("Пробег несоответствующего формата");
         }
         return createCar(carInput[1],carInput[2],carInput[3],carInput[4],Integer.valueOf(carInput[5]),Integer.valueOf(carInput[6]));
     }

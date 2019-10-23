@@ -14,7 +14,7 @@ import static cardatabase.CarList.showCarList;
 
 public class TestEditOperations {
 
-    private CarList carDataBase = new CarList();
+    private CarList carDataBase = CarList.getInstance();
 
     @Rule
     public ExpectedException expectedException = ExpectedException.none();

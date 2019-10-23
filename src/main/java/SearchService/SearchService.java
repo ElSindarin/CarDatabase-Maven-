@@ -38,48 +38,30 @@ public class SearchService {
 
     public static CarList searchByBrandAndModel(CarList carDatabase, String brand, String model) throws EmptyDataBaseException {
         checkIfDataBaseEmpty(carDatabase);
-        CarList searchResult = new CarList();
         for (Car car : carDatabase.getCarList().values()) {
             if (car.getBrand().equals(brand) && (car.getModel().equals(model))) {
-                searchResult.getCarList().put(car.getVin(), car);
+                System.out.println(car.toString());
             }
-        }
-        try {
-            searchResult.showCarList(searchResult);
-        } catch (EmptyDataBaseException e) {
-            System.out.println(e.getMessage());
         }
         return carDatabase;
     }
 
     public static CarList searchByYearRange(CarList carDatabase, Integer lowerYear, Integer upperYear) throws EmptyDataBaseException {
         checkIfDataBaseEmpty(carDatabase);
-        CarList searchResult = new CarList();
         for (Car car : carDatabase.getCarList().values()) {
             if (car.getYear() >= lowerYear && (car.getYear() <= upperYear)) {
-                searchResult.getCarList().put(car.getVin(), car);
+                System.out.println(car.toString());
             }
-        }
-        try {
-            searchResult.showCarList(searchResult);
-        } catch (EmptyDataBaseException e) {
-            System.out.println(e.getMessage());
         }
         return carDatabase;
     }
 
     public static CarList searchByMileageRange(CarList carDatabase, Integer lowerMileage, Integer upperMileage) throws EmptyDataBaseException {
         checkIfDataBaseEmpty(carDatabase);
-        CarList searchResult = new CarList();
         for (Car car : carDatabase.getCarList().values()) {
             if (car.getMileage() >= lowerMileage && (car.getMileage() <= upperMileage)) {
-                searchResult.getCarList().put(car.getVin(), car);
+                System.out.println(car.toString());
             }
-        }
-        try {
-            searchResult.showCarList(searchResult);
-        } catch (EmptyDataBaseException e) {
-            System.out.println(e.getMessage());
         }
         return carDatabase;
     }

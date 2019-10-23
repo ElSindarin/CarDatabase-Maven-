@@ -5,8 +5,12 @@ import ExceptionService.NoSuchElementException;
 import ExceptionService.NotUniqueVinException;
 
 import javax.naming.InsufficientResourcesException;
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.LogManager;
+import java.util.logging.Logger;
 
 import static CreateAddService.CreateAddCarService.*;
 import static EditService.EditService.editCarWithCheck;
@@ -22,8 +26,15 @@ import static cardatabase.CarList.showCarList;
 
 public class Main {
 
-    public static void main(String[] args) {
-        CarList carDataBase = new CarList();
+    private static Logger log = Logger.getLogger(Main.class.getName());
+
+    public Main() throws IOException {
+        log.setLevel(Level.SEVERE);
+        LogManager.getLogManager().readConfiguration(new FileInputStream("C:\\Users\\Admin\\IdeaProjects\\cardatabase\\src\\main\\java\\cardatabase\\log.properties"));
+    }
+
+    public static void main(String[] args) throws IOException {
+        CarList carDataBase = CarList.getInstance();
         String carDataBasePath = loadDatabase(carDataBase);
         callMainMenu(carDataBase, carDataBasePath);
     }
@@ -56,7 +67,7 @@ public class Main {
                         Integer mileage = inputValidatedMileage();
                         addCar(carDataBase, createCar(vin, reg, brand, model, year, mileage));
                     } catch (NotUniqueVinException | IllegalArgumentException e) {
-                        System.out.println(e.getMessage());
+                        log.log(Level.SEVERE, e.getMessage());
                     }
                     break;
                 }
@@ -73,7 +84,7 @@ public class Main {
                         } while (!vin.equals("0"));
 
                     } catch (NoSuchElementException | EmptyDataBaseException e) {
-                        System.out.println(e.getMessage());
+                        log.log(Level.SEVERE, e.getMessage());
                     }
                     break;
                 }
@@ -124,7 +135,7 @@ public class Main {
                             searchByVIN(carDataBase, vin);
                         } while (!vin.equals("0"));
                     } catch (NoSuchElementException | EmptyDataBaseException e) {
-                        System.out.println(e.getMessage());
+                        log.log(Level.SEVERE, e.getMessage());
                     }
                     break;
                 }
@@ -137,7 +148,7 @@ public class Main {
                             searchByRegNum(carDataBase, reg);
                         } while (!reg.equals("0"));
                     } catch (NoSuchElementException | EmptyDataBaseException e) {
-                        System.out.println(e.getMessage());
+                        log.log(Level.SEVERE, e.getMessage());
                     }
                     break;
                 }
@@ -155,7 +166,7 @@ public class Main {
                             }
                         } while (!brand.equals("0"));
                     } catch (EmptyDataBaseException e) {
-                        System.out.println(e.getMessage());
+                        log.log(Level.SEVERE, e.getMessage());
                     }
                     break;
                 }
@@ -172,7 +183,7 @@ public class Main {
                             }
                         } while (lowerYear != 0);
                     } catch (EmptyDataBaseException e) {
-                        System.out.println(e.getMessage());
+                        log.log(Level.SEVERE, e.getMessage());
                     }
                     break;
                 }
@@ -189,7 +200,7 @@ public class Main {
                             }
                         } while (lowerMileage != 0);
                     } catch (EmptyDataBaseException e) {
-                        System.out.println(e.getMessage());
+                        log.log(Level.SEVERE, e.getMessage());
                     }
                     break;
                 }
@@ -197,7 +208,7 @@ public class Main {
                     try {
                         showCarList(carDataBase);
                     } catch (EmptyDataBaseException e) {
-                        System.out.println(e.getMessage());
+                        log.log(Level.SEVERE, e.getMessage());
                     }
                     break;
                 }
@@ -231,7 +242,7 @@ public class Main {
                             }
                         } while (!vin.equals("0"));
                     } catch (NoSuchElementException | EmptyDataBaseException e) {
-                        System.out.println(e.getMessage());
+                        log.log(Level.SEVERE, e.getMessage());
                     }
                     break;
                 }
@@ -248,7 +259,7 @@ public class Main {
                             }
                         } while (lowerYear != 0);
                     } catch (EmptyDataBaseException | NoSuchElementException e) {
-                        System.out.println(e.getMessage());
+                        log.log(Level.SEVERE, e.getMessage());
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
@@ -258,7 +269,7 @@ public class Main {
                     try {
                         removeAllCars(carDataBase, path);
                     } catch (EmptyDataBaseException e) {
-                        System.out.println(e.getMessage());
+                        log.log(Level.SEVERE, e.getMessage());
                     }
                     break;
                 }
@@ -393,7 +404,7 @@ public class Main {
                     try {
                         exportToCSV(carDatabase, input);
                     } catch (IOException | InsufficientResourcesException | IllegalArgumentException e) {
-                        System.out.println(e.getMessage());
+                        log.log(Level.SEVERE, e.getMessage());
                     }
                     break;
                 }
@@ -404,7 +415,7 @@ public class Main {
                     try {
                         ImportFromCSV(carDatabase,input);
                     } catch (IOException | NotUniqueVinException | IllegalArgumentException e) {
-                        System.out.println(e.getMessage());
+                        log.log(Level.SEVERE, e.getMessage());
                     }
                     break;
                 }

@@ -1,7 +1,6 @@
 package cardatabase;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -9,6 +8,7 @@ import java.io.Serializable;
 
 
 public class Car implements Serializable {
+
     public Car(@JsonProperty("vin") String vin, @JsonProperty("regNumber") String regNumber, @JsonProperty("brand") String brand, @JsonProperty("model") String model, @JsonProperty("year") Integer year, @JsonProperty("mileage") Integer mileage) {
         this.vin = vin;
         this.regNumber = regNumber;

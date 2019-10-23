@@ -11,7 +11,7 @@ import static CreateAddService.CreateAddCarService.addCar;
 import static RemoveService.RemoveService.removeCar;
 
 public class TestDeleteOperations {
-    private CarList carDatabase = new CarList();
+    private CarList carDatabase = CarList.getInstance();
 
 
     @Rule
