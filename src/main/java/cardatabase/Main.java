@@ -28,12 +28,9 @@ public class Main {
 
     private static Logger log = Logger.getLogger(Main.class.getName());
 
-    public Main() throws IOException {
-        log.setLevel(Level.SEVERE);
-        LogManager.getLogManager().readConfiguration(new FileInputStream("C:\\Users\\Admin\\IdeaProjects\\cardatabase\\src\\main\\java\\cardatabase\\log.properties"));
-    }
-
     public static void main(String[] args) throws IOException {
+        LogManager.getLogManager().readConfiguration(new FileInputStream("C:\\Users\\Admin\\IdeaProjects\\cardatabase\\src\\main\\java\\cardatabase\\log.properties"));
+        log.setLevel(Level.SEVERE);
         CarList carDataBase = CarList.getInstance();
         String carDataBasePath = loadDatabase(carDataBase);
         callMainMenu(carDataBase, carDataBasePath);
