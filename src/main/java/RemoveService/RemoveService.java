@@ -1,14 +1,11 @@
 package RemoveService;
 
-import cardatabase.Car;
 import cardatabase.CarList;
 import ExceptionService.EmptyDataBaseException;
 import ExceptionService.NoSuchElementException;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.Iterator;
-import java.util.Map;
 import java.util.Objects;
 
 import static Serialization.SerializationService.deleleCar;
@@ -25,7 +22,7 @@ public class RemoveService {
             System.out.println("В базе данных найдена машина с указанным VIN-кодом. Переходим к удалению информации");
             carDatabase.getCarList().remove(vin);
             try {
-                deleleCar(new File(vin + ".json"));
+                deleleCar(vin);
             } catch (IOException e) {
                 System.out.println(e.getMessage());
             }

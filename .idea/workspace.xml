@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="aa40bcba-39e2-4a79-b857-178b6b589bfa" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/TestAbstractCarInitialization.java" afterDir="false" />
+    <list default="true" id="aa40bcba-39e2-4a79-b857-178b6b589bfa" name="Default Changelist" comment="Tests improved">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/TestAddOperations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestAddOperations.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/TestDeleteOperations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestDeleteOperations.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/TestEditOperations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestEditOperations.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/TestSearchOperations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestSearchOperations.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/RemoveService/RemoveService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RemoveService/RemoveService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Serialization/SerializationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Serialization/SerializationService.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -20,14 +17,24 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cardatabase/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="714">
+              <caret line="46" column="21" lean-forward="true" selection-start-line="46" selection-start-column="21" selection-end-line="46" selection-end-column="21" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/TestAddOperations.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
+            <state relative-caret-position="102">
               <caret line="13" column="4" selection-start-line="13" selection-start-column="4" selection-end-line="16" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#447#448#0" expanded="true" />
-                <element signature="e#503#504#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -36,26 +43,60 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/TestDeleteOperations.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
+            <state relative-caret-position="85">
               <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="17" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#472#473#0" expanded="true" />
-                <element signature="e#524#525#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/CreateAddService/CreateAddCarService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="26" column="20" selection-start-line="26" selection-start-column="20" selection-end-line="26" selection-end-column="20" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/TestSearchOperations.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="20" column="5" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/TestSearchOperations.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Serialization/SerializationService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="20" column="5" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
+            <state relative-caret-position="286">
+              <caret line="36" column="33" selection-start-line="36" selection-start-column="33" selection-end-line="36" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#612#613#0" expanded="true" />
-                <element signature="e#660#661#0" expanded="true" />
+                <element signature="e#2215#2216#0" expanded="true" />
+                <element signature="e#2266#2267#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/RemoveService/RemoveService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="24" column="21" lean-forward="true" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -93,8 +134,6 @@
         <option value="$PROJECT_DIR$/src/test/java/TestCrudOperations.java" />
         <option value="$PROJECT_DIR$/src/main/java/Serialization.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/RemoveService/RemoveService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Serialization/SerializationService.java" />
         <option value="$PROJECT_DIR$/src/main/java/InputService/InputService.java" />
         <option value="$PROJECT_DIR$/src/main/java/ExportImportService/ExportService.java" />
         <option value="$PROJECT_DIR$/src/main/java/cardatabase/Car.java" />
@@ -111,6 +150,8 @@
         <option value="$PROJECT_DIR$/src/test/java/TestAddOperations.java" />
         <option value="$PROJECT_DIR$/src/test/java/TestDeleteOperations.java" />
         <option value="$PROJECT_DIR$/src/test/java/TestSearchOperations.java" />
+        <option value="$PROJECT_DIR$/src/main/java/RemoveService/RemoveService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Serialization/SerializationService.java" />
       </list>
     </option>
   </component>
@@ -150,8 +191,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -307,7 +348,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1572211135747" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1572304427971" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../elementary_hw24" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
@@ -326,21 +367,24 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.TestAddOperations">
-    <configuration name="TestAddOperations" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="cardatabase.Main" />
       <module name="cardatabase" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="TestAddOperations" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cardatabase.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestAddOperations.test_add_car_already_exist_expect_NotUniqueVinException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestAddOperations" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="cardatabase" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="TestAddOperations" />
-      <option name="METHOD_NAME" value="test_add_car_already_exist_expect_NotUniqueVinException" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -373,11 +417,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.TestAddOperations" />
         <item itemvalue="JUnit.TestDeleteOperations.test_removeCar_empty_database_expect_EmptyDatabaseException" />
         <item itemvalue="JUnit.TestDeleteOperations" />
         <item itemvalue="JUnit.TestEditOperations" />
-        <item itemvalue="JUnit.TestAddOperations.test_add_car_already_exist_expect_NotUniqueVinException" />
       </list>
     </recent_temporary>
   </component>
@@ -511,13 +555,17 @@
       <option name="project" value="LOCAL" />
       <updated>1571902258033</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Tests improved">
+      <created>1572211150552</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1572211150553</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TestAddOperations_test_add_non_null_car_expect_has_this_car - 2019.10.27 at 22h 57m 41s.xml">
-      <configuration name="TestAddOperations.test_add_non_null_car_expect_has_this_car" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="TestAddOperations - 2019.10.27 at 22h 57m 46s.xml">
       <configuration name="TestAddOperations" configurationId="JUnit" />
     </history-entry>
@@ -545,6 +593,9 @@
     <history-entry file="TestAddOperations - 2019.10.27 at 23h 13m 26s.xml">
       <configuration name="TestAddOperations" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="TestAddOperations - 2019.10.28 at 00h 13m 20s.xml">
+      <configuration name="TestAddOperations" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -557,8 +608,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.38432837" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.38859275" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -567,7 +619,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32900432" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32900432" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39935064" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -632,7 +684,8 @@
     <MESSAGE value="Added logging" />
     <MESSAGE value="Tried to add logging to file, unable to do so" />
     <MESSAGE value="Fixed log.properties" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed log.properties" />
+    <MESSAGE value="Tests improved" />
+    <option name="LAST_COMMIT_MESSAGE" value="Tests improved" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/java/SortService/CarBrandComparator.java">
@@ -744,30 +797,10 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cardatabase/log properties" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/CreateAddService/CreateAddCarService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="17" column="26" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/EditService/EditService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cardatabase/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="32" column="17" selection-start-line="32" selection-start-column="17" selection-end-line="32" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -814,16 +847,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="969">
           <caret line="71" selection-start-line="71" selection-end-line="71" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Serialization/SerializationService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="26" selection-start-line="26" selection-end-line="26" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -887,10 +910,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/RemoveService/RemoveService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/cardatabase/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
-          <caret line="40" column="22" lean-forward="true" selection-start-line="40" selection-end-line="41" />
+        <state relative-caret-position="714">
+          <caret line="46" column="21" lean-forward="true" selection-start-line="46" selection-start-column="21" selection-end-line="46" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -899,36 +922,62 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/TestAddOperations.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
+        <state relative-caret-position="102">
           <caret line="13" column="4" selection-start-line="13" selection-start-column="4" selection-end-line="16" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#447#448#0" expanded="true" />
-            <element signature="e#503#504#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/TestDeleteOperations.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
+        <state relative-caret-position="85">
           <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="17" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#472#473#0" expanded="true" />
-            <element signature="e#524#525#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/CreateAddService/CreateAddCarService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="26" column="20" selection-start-line="26" selection-start-column="20" selection-end-line="26" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/TestSearchOperations.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
+        <state relative-caret-position="306">
           <caret line="20" column="5" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#612#613#0" expanded="true" />
-            <element signature="e#660#661#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/RemoveService/RemoveService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="24" column="21" lean-forward="true" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Serialization/SerializationService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="36" column="33" selection-start-line="36" selection-start-column="33" selection-end-line="36" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2215#2216#0" expanded="true" />
+            <element signature="e#2266#2267#0" expanded="true" />
           </folding>
         </state>
       </provider>

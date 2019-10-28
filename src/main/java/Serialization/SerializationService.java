@@ -10,27 +10,31 @@ import java.util.Objects;
 
 public class SerializationService {
 
+    private static final ObjectMapper mapper = new ObjectMapper();
+
+
     public static void saveToDatabase (Car car) throws IOException {
-        ObjectMapper mapper = new ObjectMapper();
-        FileOutputStream os = new FileOutputStream(car.getVin() + ".json");
-        os.write(mapper.writeValueAsBytes(car));
+        try (FileOutputStream os = new FileOutputStream(car.getVin() + ".json")) {
+            os.write(mapper.writeValueAsBytes(car));
+        }
     }
 
     public static void readFromDatabase (CarList carDatabase, String path) throws IOException {
         File folder = new File(path);
-        ObjectMapper mapper = new ObjectMapper();
         if (folder.isDirectory()) {
             for (File file : Objects.requireNonNull(folder.listFiles())) {
                 if (file.getCanonicalPath().endsWith(".json")) {
-                    FileInputStream is = new FileInputStream(file.getName());
-                    Car car = mapper.readValue(is, Car.class);
-                    carDatabase.getCarList().put(car.getVin(), car);
+                    try (FileInputStream is = new FileInputStream(file.getName())) {
+                        Car car = mapper.readValue(is, Car.class);
+                        carDatabase.getCarList().put(car.getVin(), car);
+                    }
                 }
             }
         }
     }
 
-    public static void deleleCar (File file) throws IOException {
+    public static void deleleCar (String vin) throws IOException {
+        File file = findFile(vin);
         System.out.println(file.getCanonicalPath());
         if (file.getCanonicalPath().endsWith(".json")) {
             if (file.delete()) {
@@ -55,5 +59,9 @@ public class SerializationService {
         File file = new File(path + "\\" + car.getVin());
         file.delete();
         saveToDatabase(car);
+    }
+
+    private static File findFile (String vin) {
+        return new File(vin + ".json");
     }
 }
