@@ -15,7 +15,9 @@ public class CarList {
     }
 
     public static CarList getInstance() {
-        return Helper.instance;
+       // synchronized (CarList.class) {
+            return Helper.instance;
+       // }
     }
 
     public Map<String, Car> getCarList() {

@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="aa40bcba-39e2-4a79-b857-178b6b589bfa" name="Default Changelist" comment="Tests improved">
+    <list default="true" id="aa40bcba-39e2-4a79-b857-178b6b589bfa" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/TestMultiThreadingAccess.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/TestThreadImplementation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/RemoveService/RemoveService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RemoveService/RemoveService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Serialization/SerializationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Serialization/SerializationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cardatabase/CarList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cardatabase/CarList.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -17,87 +18,50 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cardatabase/Main.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cardatabase/CarList.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="714">
-              <caret line="46" column="21" lean-forward="true" selection-start-line="46" selection-start-column="21" selection-end-line="46" selection-end-column="21" />
+            <state relative-caret-position="323">
+              <caret line="19" column="9" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#556#557#0" expanded="true" />
+                <element signature="e#1214#1215#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/TestAddOperations.java">
+        <entry file="file://$PROJECT_DIR$/src/test/java/TestMultiThreadingAccess.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="13" column="4" selection-start-line="13" selection-start-column="4" selection-end-line="16" selection-end-column="5" />
+            <state relative-caret-position="425">
+              <caret line="55" column="63" selection-start-line="55" selection-start-column="63" selection-end-line="55" selection-end-column="63" />
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/TestDeleteOperations.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="17" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/CreateAddService/CreateAddCarService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="26" column="20" selection-start-line="26" selection-start-column="20" selection-end-line="26" selection-end-column="20" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/TestSearchOperations.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="20" column="5" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#334#335#0" expanded="true" />
+                <element signature="e#382#383#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Serialization/SerializationService.java">
+        <entry file="file://$PROJECT_DIR$/src/test/java/TestThreadImplementation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="36" column="33" selection-start-line="36" selection-start-column="33" selection-end-line="36" selection-end-column="33" />
+            <state relative-caret-position="153">
+              <caret line="9" column="53" selection-start-line="9" selection-start-column="53" selection-end-line="9" selection-end-column="53" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2215#2216#0" expanded="true" />
-                <element signature="e#2266#2267#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/RemoveService/RemoveService.java">
+        <entry file="file://$PROJECT_DIR$/src/test/java/TestAbstractCarInitialization.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="24" column="21" lean-forward="true" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state>
+              <caret column="23" lean-forward="true" selection-start-column="23" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -138,13 +102,11 @@
         <option value="$PROJECT_DIR$/src/main/java/ExportImportService/ExportService.java" />
         <option value="$PROJECT_DIR$/src/main/java/cardatabase/Car.java" />
         <option value="$PROJECT_DIR$/src/main/java/SearchService/SearchService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cardatabase/CarList.java" />
         <option value="$PROJECT_DIR$/src/main/java/cardatabase/log properties" />
         <option value="$PROJECT_DIR$/src/main/java/CreateAddService/CreateAddCarService.java" />
         <option value="$PROJECT_DIR$/src/main/java/EditService/EditService.java" />
         <option value="$PROJECT_DIR$/src/main/java/ExportImportService/ImportService.java" />
         <option value="$PROJECT_DIR$/src/main/java/cardatabase/log.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/cardatabase/Main.java" />
         <option value="$PROJECT_DIR$/src/test/java/TestAbstractCarInitialization.java" />
         <option value="$PROJECT_DIR$/src/test/java/TestEditOperations.java" />
         <option value="$PROJECT_DIR$/src/test/java/TestAddOperations.java" />
@@ -152,6 +114,11 @@
         <option value="$PROJECT_DIR$/src/test/java/TestSearchOperations.java" />
         <option value="$PROJECT_DIR$/src/main/java/RemoveService/RemoveService.java" />
         <option value="$PROJECT_DIR$/src/main/java/Serialization/SerializationService.java" />
+        <option value="$PROJECT_DIR$/src/test/java/TestAbstractNonNullCarDatabaseInitialization.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cardatabase/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cardatabase/CarList.java" />
+        <option value="$PROJECT_DIR$/src/test/java/TestThreadImplementation.java" />
+        <option value="$PROJECT_DIR$/src/test/java/TestMultiThreadingAccess.java" />
       </list>
     </option>
   </component>
@@ -348,8 +315,8 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1572304427971" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../elementary_hw24" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1572965602923" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -367,7 +334,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.TestMultiThreadingAccess.test_multithreading_access_to_getInstance">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="cardatabase.Main" />
       <module name="cardatabase" />
@@ -389,14 +356,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestDeleteOperations" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="cardatabase" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="TestDeleteOperations" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="TestDeleteOperations.test_removeCar_empty_database_expect_EmptyDatabaseException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="cardatabase" />
       <option name="PACKAGE_NAME" value="" />
@@ -407,21 +366,31 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestEditOperations" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestMultiThreadingAccess" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="cardatabase" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="TestEditOperations" />
+      <option name="MAIN_CLASS_NAME" value="TestMultiThreadingAccess" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestMultiThreadingAccess.test_multithreading_access_to_getInstance" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="cardatabase" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestMultiThreadingAccess" />
+      <option name="METHOD_NAME" value="test_multithreading_access_to_getInstance" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TestMultiThreadingAccess.test_multithreading_access_to_getInstance" />
+        <item itemvalue="JUnit.TestMultiThreadingAccess" />
         <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.TestAddOperations" />
         <item itemvalue="JUnit.TestDeleteOperations.test_removeCar_empty_database_expect_EmptyDatabaseException" />
-        <item itemvalue="JUnit.TestDeleteOperations" />
-        <item itemvalue="JUnit.TestEditOperations" />
       </list>
     </recent_temporary>
   </component>
@@ -562,39 +531,46 @@
       <option name="project" value="LOCAL" />
       <updated>1572211150553</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Fixed work with resources, changed deleteCar() method">
+      <created>1572304451258</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1572304451258</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TestAddOperations - 2019.10.27 at 22h 57m 46s.xml">
-      <configuration name="TestAddOperations" configurationId="JUnit" />
+    <history-entry file="TestMultiThreadingAccess_test_multithreading_access_to_getInstance - 2019.11.05 at 16h 27m 34s.xml">
+      <configuration name="TestMultiThreadingAccess.test_multithreading_access_to_getInstance" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestAddOperations_test_add_car_already_exist_expect_NotUniqueVinException - 2019.10.27 at 22h 57m 53s.xml">
-      <configuration name="TestAddOperations.test_add_car_already_exist_expect_NotUniqueVinException" configurationId="JUnit" />
+    <history-entry file="TestMultiThreadingAccess - 2019.11.05 at 16h 31m 53s.xml">
+      <configuration name="TestMultiThreadingAccess" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestEditOperations - 2019.10.27 at 23h 01m 52s.xml">
-      <configuration name="TestEditOperations" configurationId="JUnit" />
+    <history-entry file="TestMultiThreadingAccess_test_multithreading_access_to_getInstance - 2019.11.05 at 16h 32m 18s.xml">
+      <configuration name="TestMultiThreadingAccess.test_multithreading_access_to_getInstance" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestAddOperations - 2019.10.27 at 23h 02m 09s.xml">
-      <configuration name="TestAddOperations" configurationId="JUnit" />
+    <history-entry file="TestMultiThreadingAccess - 2019.11.05 at 16h 33m 01s.xml">
+      <configuration name="TestMultiThreadingAccess" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestAddOperations - 2019.10.27 at 23h 02m 44s.xml">
-      <configuration name="TestAddOperations" configurationId="JUnit" />
+    <history-entry file="TestMultiThreadingAccess_test_multithreading_access_to_getInstance - 2019.11.05 at 16h 33m 15s.xml">
+      <configuration name="TestMultiThreadingAccess.test_multithreading_access_to_getInstance" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestDeleteOperations - 2019.10.27 at 23h 02m 54s.xml">
-      <configuration name="TestDeleteOperations" configurationId="JUnit" />
+    <history-entry file="TestMultiThreadingAccess_test_multithreading_access_to_getInstance - 2019.11.05 at 16h 36m 03s.xml">
+      <configuration name="TestMultiThreadingAccess.test_multithreading_access_to_getInstance" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestDeleteOperations_test_removeCar_empty_database_expect_EmptyDatabaseException - 2019.10.27 at 23h 03m 04s.xml">
-      <configuration name="TestDeleteOperations.test_removeCar_empty_database_expect_EmptyDatabaseException" configurationId="JUnit" />
+    <history-entry file="TestMultiThreadingAccess_test_multithreading_access_to_getInstance - 2019.11.05 at 16h 36m 16s.xml">
+      <configuration name="TestMultiThreadingAccess.test_multithreading_access_to_getInstance" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestAddOperations - 2019.10.27 at 23h 13m 12s.xml">
-      <configuration name="TestAddOperations" configurationId="JUnit" />
+    <history-entry file="TestMultiThreadingAccess_test_multithreading_access_to_getInstance - 2019.11.05 at 16h 37m 48s.xml">
+      <configuration name="TestMultiThreadingAccess.test_multithreading_access_to_getInstance" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestAddOperations - 2019.10.27 at 23h 13m 26s.xml">
-      <configuration name="TestAddOperations" configurationId="JUnit" />
+    <history-entry file="TestMultiThreadingAccess_test_multithreading_access_to_getInstance - 2019.11.05 at 16h 51m 25s.xml">
+      <configuration name="TestMultiThreadingAccess.test_multithreading_access_to_getInstance" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestAddOperations - 2019.10.28 at 00h 13m 20s.xml">
-      <configuration name="TestAddOperations" configurationId="JUnit" />
+    <history-entry file="TestMultiThreadingAccess_test_multithreading_access_to_getInstance - 2019.11.05 at 16h 51m 44s.xml">
+      <configuration name="TestMultiThreadingAccess.test_multithreading_access_to_getInstance" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TodoView">
@@ -610,7 +586,7 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.38859275" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.39712155" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -618,8 +594,8 @@
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32900432" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32900432" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32900432" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39935064" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -634,7 +610,7 @@
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="right" id="Maven" order="6" visible="true" weight="0.22761194" />
+      <window_info anchor="right" id="Maven" order="6" weight="0.22761194" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
     </layout>
     <layout-to-restore>
@@ -685,7 +661,8 @@
     <MESSAGE value="Tried to add logging to file, unable to do so" />
     <MESSAGE value="Fixed log.properties" />
     <MESSAGE value="Tests improved" />
-    <option name="LAST_COMMIT_MESSAGE" value="Tests improved" />
+    <MESSAGE value="Fixed work with resources, changed deleteCar() method" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed work with resources, changed deleteCar() method" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/java/SortService/CarBrandComparator.java">
@@ -880,22 +857,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cardatabase/CarList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-6">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#387#388#0" expanded="true" />
-            <element signature="e#425#426#0" expanded="true" />
-            <element signature="e#469#470#0" expanded="true" />
-            <element signature="e#499#500#0" expanded="true" />
-            <element signature="e#1118#1119#0" expanded="true" />
-            <element signature="e#1157#1158#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/TestEditOperations.java">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -903,67 +864,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/TestAbstractCarInitialization.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cardatabase/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="46" column="21" lean-forward="true" selection-start-line="46" selection-start-column="21" selection-end-line="46" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/TestAddOperations.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="13" column="4" selection-start-line="13" selection-start-column="4" selection-end-line="16" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/TestDeleteOperations.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="17" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/CreateAddService/CreateAddCarService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="26" column="20" selection-start-line="26" selection-start-column="20" selection-end-line="26" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/TestSearchOperations.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="20" column="5" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/RemoveService/RemoveService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="24" column="21" lean-forward="true" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
+        <state relative-caret-position="238">
+          <caret line="24" column="21" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -972,12 +876,111 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Serialization/SerializationService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
+        <state relative-caret-position="612">
           <caret line="36" column="33" selection-start-line="36" selection-start-column="33" selection-end-line="36" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2215#2216#0" expanded="true" />
-            <element signature="e#2266#2267#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/TestSearchOperations.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="17" column="4" selection-start-line="17" selection-start-column="4" selection-end-line="20" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/TestAddOperations.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cardatabase/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="538">
+          <caret line="205" column="34" selection-start-line="205" selection-start-column="34" selection-end-line="205" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/TestDeleteOperations.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="17" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/TestAbstractNonNullCarDatabaseInitialization.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="31" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/CreateAddService/CreateAddCarService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cardatabase/CarList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="9" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#556#557#0" expanded="true" />
+            <element signature="e#1214#1215#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/TestMultiThreadingAccess.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="55" column="63" selection-start-line="55" selection-start-column="63" selection-end-line="55" selection-end-column="63" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#334#335#0" expanded="true" />
+            <element signature="e#382#383#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/TestAbstractCarInitialization.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="23" lean-forward="true" selection-start-column="23" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/TestThreadImplementation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="53" selection-start-line="9" selection-start-column="53" selection-end-line="9" selection-end-column="53" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
