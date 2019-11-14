@@ -15,9 +15,9 @@ public class CarList {
     }
 
     public static CarList getInstance() {
-       // synchronized (CarList.class) {
+        synchronized (CarList.class) {
             return Helper.instance;
-       // }
+        }
     }
 
     public Map<String, Car> getCarList() {

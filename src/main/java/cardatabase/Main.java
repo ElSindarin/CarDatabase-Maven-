@@ -18,6 +18,8 @@ import static ExportImportService.ExportService.exportToCSV;
 import static ExportImportService.ImportService.ImportFromCSV;
 import static InputService.InputService.*;
 import static RemoveService.RemoveService.*;
+import static SchedulerService.BasicBackupService.addComplexBackupService;
+import static SchedulerService.BasicBackupService.addSimpleBackupService;
 import static SearchService.SearchService.*;
 import static Serialization.SerializationService.readFromDatabase;
 import static SortService.SortService.*;
@@ -33,10 +35,17 @@ public class Main {
         log.setLevel(Level.SEVERE);
         CarList carDataBase = CarList.getInstance();
         String carDataBasePath = loadDatabase(carDataBase);
-        callMainMenu(carDataBase, carDataBasePath);
+        System.out.println("Введите путь, по которому хотите хранить базовую бэкап-версию базы данных. Обновление бэкап-версии происходит раз в 30 секунд");
+        Scanner sc = new Scanner(System.in);
+        String simpleBackupPath = sc.nextLine();
+        addSimpleBackupService(carDataBase, simpleBackupPath);
+        System.out.println("Введите путь, по которому хотите хранить составную бэкап-версию базы данных. Обновление бэкап-версии происходит раз в 10 минут");
+        String complexBackupPath = sc.nextLine();
+        addComplexBackupService(carDataBase, complexBackupPath);
+        callMainMenu(carDataBase, carDataBasePath, complexBackupPath);
     }
 
-    public static void callMainMenu(CarList carDataBase, String path) {
+    public static void callMainMenu(CarList carDataBase, String path, String complexBackupPath) {
         System.out.println("Добро пожаловать в меню по работе с базой данных автомобилей!");
         byte number = 0;
         Scanner sc = new Scanner(System.in);
@@ -96,11 +105,25 @@ public class Main {
                 case 6: {
                     callCsvMenu(carDataBase);
                 }
+                case 7: {
+                    System.out.println("Выберите точку восстановления (от 1 - самая старая до 10 - самая новая). Введите 0, чтобы вернуться в предыдущее меню");
+                    Integer point = sc.nextInt();
+                    if (point == 0) {
+                        break;
+                    }
+                    try {
+                        carDataBase.getCarList().clear();
+                        ImportFromCSV(carDataBase, complexBackupPath + "\\backup" + (point - 1) + ".csv");
+                    } catch (IOException | NotUniqueVinException e) {
+                        e.printStackTrace();
+                    }
+                    break;
+                }
                 case 0: {
                     continue mainMenu;
                 }
                 case -1: {
-                    return;
+                    System.exit(0);
                 }
                 default: {
                     System.out.println("Введённая вами опция не существует!");
@@ -327,6 +350,7 @@ public class Main {
         System.out.println("4 - Открыть меню удаления информации");
         System.out.println("5 - Открыть меню сортировки");
         System.out.println("6 - Открыть меню экспорта/импорта базы данных в CSV-файл");
+        System.out.println("7 - Восстановление базы данных по точкам восстановления");
         System.out.println("0 - Вернуться в предыдущее меню");
         System.out.println("-1 - Завершить программу");
     }
@@ -399,7 +423,7 @@ public class Main {
                     Scanner scanner = new Scanner(System.in);
                     String input = scanner.nextLine();
                     try {
-                        exportToCSV(carDatabase, input);
+                        exportToCSV(carDatabase, input,"database");
                     } catch (IOException | InsufficientResourcesException | IllegalArgumentException e) {
                         log.log(Level.SEVERE, e.getMessage());
                     }
